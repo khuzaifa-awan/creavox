@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=DM+Sans:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 16px;
+  --background: #0b0d11;
+  --foreground: #F0EFE7;
+  --card: #13161c;
+  --card-foreground: #F0EFE7;
+  --primary: #CB8530;
+  --primary-foreground: #F0EFE7;
+  --secondary: #1e2028;
+  --secondary-foreground: #F0EFE7;
+  --muted: #1e2028;
+  --muted-foreground: #9a9aaa;
+  --accent: #1e2028;
+  --accent-foreground: #F0EFE7;
+  --destructive: #d4183d;
+  --border: rgba(255, 255, 255, 0.08);
+  --input: rgba(255, 255, 255, 0.08);
+  --input-background: #1e2028;
+  --ring: #CB8530;
+  --radius: 0.625rem;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+@layer base {
+ 
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    
+  }
+  
+}
+
+html {
+  font-size: var(--font-size);
+   scroll-behavior: smooth;
+
+}
+
+/* Pain cards — ProblemSection */
+.pain-card {
+  background-color: #1e1f26;
+  border: 1px solid rgba(203, 133, 48, 0.25);
+  border-radius: 10px;
+  padding: 32px;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.pain-card:hover {
+  box-shadow: 0 0 40px rgba(203, 133, 48, 0.08);
+  border-color: rgba(203, 133, 48, 0.5);
+}
+
+/* Shared CTA button */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #cb8530;
+  color: #27282f;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+.btn-primary:hover {
+  background-color: #e8a84a;
+  box-shadow: 0 0 20px rgba(203, 133, 48, 0.35);
+  transform: scale(1.02);
+}
+.btn-primary:active {
+  transform: scale(0.98);
+}
+
+/* Ghost button used in HeroSection */
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: transparent;
+  color: #F0EFE7;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  padding: 16px 32px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+.btn-ghost:hover {
+  color: #cb8530;
+}
+
+
+
+/* ---------Chrome------------ */
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=DM+Sans:wght@400;500&display=swap'); */
+/* @import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 16px;
+  --background: #0b0d11;
+  --foreground: #F0EFE7;
+  --card: #13161c;
+  --card-foreground: #F0EFE7;
+  --primary: #CB8530;
+  --primary-foreground: #F0EFE7;
+  --secondary: #1e2028;
+  --secondary-foreground: #F0EFE7;
+  --muted: #1e2028;
+  --muted-foreground: #9a9aaa;
+  --accent: #1e2028;
+  --accent-foreground: #F0EFE7;
+  --destructive: #d4183d;
+  --destructive-foreground: #ffffff;
+  --border: rgba(255, 255, 255, 0.08);
+  --input: rgba(255, 255, 255, 0.08);
+  --input-background: #1e2028;
+  --ring: #CB8530;
+  --radius: 0.625rem;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  button {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    line-height: 1.5;
+  }
+}
+
+html {
+  font-size: var(--font-size);
+} */
+
+/* ─── Pain Cards (ProblemSection) ─────────────────────── */
+/* .pain-card {
+  background-color: #1e1f26;
+  border: 1px solid rgba(203, 133, 48, 0.25);
+  border-radius: 10px;
+  padding: 32px;
+  cursor: default;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.pain-card:hover {
+  box-shadow: 0 0 40px rgba(203, 133, 48, 0.08);
+  border-color: rgba(203, 133, 48, 0.5);
+} */
+
+/* ─── CTA Button (reused across sections) ─────────────── */
+/* .btn-primary {
+  display: inline-flex;
+  align-items: center;
+  background-color: #CB8530;
+  color: #27282f;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: #e8a84a;
+  box-shadow: 0 0 20px rgba(203, 133, 48, 0.35);
+  transform: scale(1.02);
+}
+
+.btn-primary:active {
+  transform: scale(0.98);
+} */
+
+/* ─── Ghost Button (HeroSection "See How It Works") ───── */
+/* .btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: transparent;
+  color: #F0EFE7;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.btn-ghost:hover {
+  color: #CB8530;
+} */
+
+
