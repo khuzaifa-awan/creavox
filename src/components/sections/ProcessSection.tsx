@@ -172,768 +172,56 @@
 //   );
 // }
 
-
-// -------------chrome new version---------
-
-
-// "use client";
-
-// import { useEffect, useRef } from "react";
-// import gsap from "gsap";
-// import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-// gsap.registerPlugin(ScrollTrigger);
-
-// const steps = [
-//   {
-//     number: "01",
-//     label: "Ad Impression",
-//     title: "Precision Targeting",
-//     description:
-//       "We run Meta and Google campaigns built specifically for aesthetic procedures. We align targeting, creative, and funnel so interest turns into booked patients instead of wasted traffic.",
-//     highlight: "Right audience + Right ad + Right moment",
-//   },
-//   {
-//     number: "02",
-//     label: "Click",
-//     title: "Intent-Driven Creative",
-//     description:
-//       "A landing page converts when it matches intent fast and removes every distraction from the decision. If the next step isn't obvious, people compare, hesitate, and leave.",
-//     highlight: "Click to form submission to captured interest",
-//   },
-//   {
-//     number: "03",
-//     label: "Landing Page",
-//     title: "Conversion Infrastructure",
-//     description:
-//       "Every click is directed to a conversion-optimized landing page designed to turn interest into booked consultations.",
-//     highlight: "Optimized for one action — booking",
-//   },
-//   {
-//     number: "04",
-//     label: "AI Follow-Up",
-//     title: "60-Second Response",
-//     description:
-//       "The moment a form is submitted, our AI sends a personalized WhatsApp or Email within 60 seconds. It nurtures over 7 days — 24 hours a day, 7 days a week.",
-//     highlight: "Lead contacted in under 60 seconds, nurtured until booked",
-//   },
-//   {
-//     number: "05",
-//     label: "Booking Calendar",
-//     title: "Qualified Scheduling",
-//     description:
-//       "Only serious, pre-qualified patients are guided to your calendar. The AI has already confirmed their procedure interest and financial intent.",
-//     highlight: "Pre-qualified patients only reach your calendar",
-//   },
-//   {
-//     number: "06",
-//     label: "Confirmed Consultation",
-//     title: "Revenue in Your Clinic",
-//     description:
-//       "Your team receives warm, qualified leads — not cold form submissions. Fewer no-shows, higher consultation-to-procedure conversion rates.",
-//     highlight: "Serious patients. Real revenue. Predictable growth.",
-//   },
-// ];
-
-// export function ProcessSection() {
-    
-//   const stackRef = useRef<HTMLDivElement>(null);
-//   const sectionRef = useRef<HTMLDivElement>(null);
-// //   const stepsRef = useRef<(HTMLDivElement | null)[]>([]);
-
-//   useEffect(() => {
-//   const stack = stackRef.current;
-
-//   if (!stack) return;
-
-//   const ctx = gsap.context(() => {
-//     ScrollTrigger.create({
-//       trigger: stack,
-//       start: "top top",
-//       end: `+=${steps.length * window.innerHeight}`,
-//       pin: true,
-//       pinSpacing: true,
-//       anticipatePin: 1,
-//     });
-//   });
-
-//   return () => ctx.revert();
-// }, []);
-
-//   return (
-//     <div ref={sectionRef} id="process" className="relative">
-
-//       {/* Fixed Background */}
-//       <div
-//         className="sticky top-0 w-full h-screen -z-10"
-//         style={{
-//           backgroundImage: "url('/process-bg.jpg')",
-//           backgroundSize: "cover",
-//           backgroundPosition: "center",
-//           marginBottom: "-100vh",
-//         }}
-//       >
-//         <div className="absolute inset-0 bg-black/70" />
-//       </div>
-
-//       {/* Intro */}
-//       <div className="sticky top-0 z-10 flex flex-col items-center justify-center h-screen text-center px-4">
-//         <p className="text-xs uppercase tracking-[0.2em] text-primary mb-4 font-medium">
-//           Our Process
-//         </p>
-//         <h2 className="text-3xl md:text-5xl lg:text-6xl font-semibold text-white max-w-4xl leading-tight">
-//           This Is Exactly How We Fill Your Consultation Calendar —{" "}
-//           <span className="bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
-//             Every Single Month
-//           </span>
-//         </h2>
-//         <p className="mt-6 text-base md:text-lg text-white/60 max-w-xl"
-//           style={{ fontFamily: "var(--font-poppins), sans-serif" }}
-//         >
-//           Six steps. One system. Zero guesswork.
-//         </p>
-//         <div className="mt-8 animate-bounce">
-//           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-//             <path d="M12 5v14M5 12l7 7 7-7" stroke="#CB8530" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-//           </svg>
-//         </div>
-//       </div>
-
-//       {/* Steps */}
-//             <div
-//         ref={stackRef}
-//         className="relative h-screen"
-//         style={{
-//             height: `${steps.length * 100}vh`,
-//         }}
-//         >
-//         {steps.map((step, index) => (
-//           <div
-//             key={step.number}
-//             className="sticky top-0 h-screen flex items-center justify-center px-8"
-//             style={{
-//             zIndex: index + 1,
-//             }}
-//           >
-//             <div className="w-full max-w-7xl mx-auto border-t border-white/10 py-20">
-//         <div className="grid lg:grid-cols-[1fr_320px] gap-16 items-start">
-
-//     {/* LEFT SIDE */}
-//     <div>
-//       <div
-//         className="text-lg font-medium mb-3"
-//         style={{ color: "#CB8530" }}
-//       >
-//         {step.number}/
-//       </div>
-
-//       <h3
-//         className="
-//           text-6xl
-//           md:text-7xl
-//           lg:text-8xl
-//           font-extrabold
-//           tracking-[-0.05em]
-//           leading-[0.88]
-//           text-white
-//         "
-//         style={{ fontFamily: "var(--font-poppins), sans-serif" }}
-//       >
-//         {step.label}
-//       </h3>
-//     </div>
-
-//     {/* RIGHT SIDE */}
-//     <div className="pt-4">
-//       <div className="space-y-4">
-
-//         <p className="text-white/55 text-base">
-//           {step.title}
-//         </p>
-
-//         <p className="text-white/55 text-base">
-//           {step.description}
-//         </p>
-// card
-//         <p
-//           className="text-sm"
-//           style={{ color: "#CB8530" }}
-//         >
-//           {step.highlight}
-//         </p>
-//       </div>
-
-//       <button
-//         className="
-//           mt-12
-//           text-white
-//           border-b
-//           border-white
-//           pb-1
-//           text-lg
-//           hover:opacity-70
-//           transition
-//         "
-//       >
-//         View Process
-//       </button>
-//     </div>
-
-//   </div>
-// </div>
-//           </div>
-//         ))}
-//       </div>
-
-//       {/* CTA after last step */}
-//       <div className="relative z-10 flex flex-col items-center justify-center min-h-[50vh] px-4 text-center">
-//         <p
-//           className="text-base md:text-lg text-white/75 italic max-w-2xl mb-10"
-//           style={{ fontFamily: "var(--font-poppins), sans-serif" }}
-//         >
-//           Every week without a system is a week your competitors are filling
-//           the consultations that should be yours.
-//         </p>
-//         <button className="btn-primary text-sm md:text-base px-8 py-4">
-//           I'm Ready — Let's Build My System →
-//         </button>
-//       </div>
-
-//     </div>
-//   );
-// }
-
-
-
-
-
-
-// -------Safari new version----------
-
-
-
-// "use client";
-
-// import { useEffect, useRef } from "react";
-
-// const steps = [
-//   {
-//     number: "01",
-//     label: "Ad Impression",
-//     title: "Precision Targeting",
-//     description: "Targeting, creative, and funnel aligned so interest turns into booked patients — not wasted traffic.",
-//     highlight: "Right audience + Right ad + Right moment",
-//   },
-//   {
-//     number: "02",
-//     label: "Click",
-//     title: "Intent-Driven Creative",
-//     description: "Every ad creative is built around one goal — getting the right person to click.",
-//     highlight: "Click to form submission to captured interest",
-//   },
-//   {
-//     number: "03",
-//     label: "Landing Page",
-//     title: "Conversion Infrastructure",
-//     description: "Every click lands on a conversion-optimized page built for one action — booking.",
-//     highlight: "Optimized for one action — booking",
-//   },
-//   {
-//     number: "04",
-//     label: "AI Follow-Up",
-//     title: "60-Second Response",
-//     description: "The moment a form is submitted, our AI sends a personalized WhatsApp or Email within 60 seconds.",
-//     highlight: "Lead contacted in under 60 seconds, nurtured until booked",
-//   },
-//   {
-//     number: "05",
-//     label: "Booking Calendar",
-//     title: "Qualified Scheduling",
-//     description: "Only serious, pre-qualified patients reach your calendar.",
-//     highlight: "Pre-qualified patients only reach your calendar",
-//   },
-//   {
-//     number: "06",
-//     label: "Confirmed Consultation",
-//     title: "Revenue in Your Clinic",
-//     description: "Your team receives warm, qualified leads — not cold form submissions.",
-//     highlight: "Serious patients. Real revenue. Predictable growth.",
-//   },
-// ];
-
-// export function ProcessSection() {
-//   const sectionRef = useRef<HTMLDivElement>(null);
-
-//   useEffect(() => {
-//     let gsap: typeof import("gsap").gsap;
-//     let ScrollTrigger: typeof import("gsap/ScrollTrigger").ScrollTrigger;
-
-//     const init = async () => {
-//       const gsapModule = await import("gsap");
-//       const stModule = await import("gsap/ScrollTrigger");
-//       gsap = gsapModule.gsap;
-//       ScrollTrigger = stModule.ScrollTrigger;
-//       gsap.registerPlugin(ScrollTrigger);
-
-//       const section = sectionRef.current;
-//       if (!section) return;
-
-//       const cards = section.querySelectorAll<HTMLElement>(".process-step-card");
-
-//       cards.forEach((card) => {
-//         gsap.fromTo(
-//           card,
-//           { opacity: 0, y: 60 },
-//           {
-//             opacity: 1,
-//             y: 0,
-//             duration: 0.7,
-//             ease: "power2.out",
-//             scrollTrigger: {
-//               trigger: card,
-//               start: "top 75%",
-//               toggleActions: "play none none none",
-//             },
-//           }
-//         );
-//       });
-//     };
-
-//     init();
-
-//     return () => {
-//       import("gsap/ScrollTrigger").then(({ ScrollTrigger }) => {
-//         ScrollTrigger.getAll().forEach((t) => t.kill());
-//       });
-//     };
-//   }, []);
-
-//   return (
-//     <div ref={sectionRef} id="process" className="relative bg-[#0b0d11]">
-
-//       {/* ── Intro ── */}
-//       <div className="relative z-10 flex flex-col items-center justify-center min-h-[60vh] text-center px-4 py-24">
-//         <p className="text-xs uppercase tracking-[0.2em] text-primary mb-4 font-medium">
-//           Our Process
-//         </p>
-//         <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-[#F0EFE7] max-w-4xl leading-tight">
-//           This Is Exactly How We Fill Your Consultation Calendar —{" "}
-//           <span className="bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
-//             Every Single Month
-//           </span>
-//         </h2>
-//         <p className="mt-6 text-base md:text-lg text-[#F0EFE7]/55 max-w-xl" style={{ fontFamily: "'Poppins', sans-serif" }}>
-//           Six steps. One system. Zero guesswork.
-//         </p>
-//         <div className="mt-10 animate-bounce">
-//           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-//             <path d="M12 5v14M5 12l7 7 7-7" stroke="#CB8530" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-//           </svg>
-//         </div>
-//       </div>
-
-//       {/* ── Steps ── */}
-//       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">
-//         {steps.map((step, index) => (
-//           <div
-//             key={step.number}
-//             className="process-step-card border-t border-[rgba(255,255,255,0.08)] py-12 sm:py-16 md:py-20 flex flex-col md:flex-row md:items-start gap-8 md:gap-16"
-//             style={{ opacity: 0 }}
-//           >
-//             {/* Left — number + label */}
-//             <div className="flex-shrink-0 md:w-48">
-//               <div className="flex items-baseline gap-3">
-//                 <span
-//                   className="text-sm font-medium"
-//                   style={{ color: "#CB8530", fontFamily: "'Poppins', sans-serif" }}
-//                 >
-//                   {step.number}/
-//                 </span>
-//               </div>
-//               <h3
-//                 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#F0EFE7] mt-1 leading-tight"
-//                 style={{ fontFamily: "'Poppins', sans-serif" }}
-//               >
-//                 {step.label}
-//               </h3>
-//             </div>
-
-//             {/* Right — details */}
-//             <div className="flex-1 md:pt-1">
-//               <p
-//                 className="text-sm uppercase tracking-[0.15em] font-medium mb-4"
-//                 style={{ color: "#CB8530" }}
-//               >
-//                 {step.title}
-//               </p>
-//               <p
-//                 className="text-base md:text-lg text-[#F0EFE7]/60 leading-relaxed mb-6 max-w-xl"
-//                 style={{ fontFamily: "'Poppins', sans-serif" }}
-//               >
-//                 {step.description}
-//               </p>
-//               <p
-//                 className="text-sm font-medium"
-//                 style={{ color: "rgba(203,133,48,0.75)" }}
-//               >
-//                 → {step.highlight}
-//               </p>
-//             </div>
-//           </div>
-//         ))}
-//       </div>
-
-//       {/* ── CTA ── */}
-//       <div className="relative z-10 flex flex-col items-center justify-center px-4 pb-24 text-center">
-//         <p
-//           className="text-base md:text-lg text-[#F0EFE7]/65 italic max-w-2xl mb-10"
-//           style={{ fontFamily: "'Poppins', sans-serif" }}
-//         >
-//           Every week without a system is a week your competitors are filling the consultations that should be yours.
-//         </p>
-//         <button className="btn-primary text-sm md:text-base px-8 py-4">
-//           I&apos;m Ready — Let&apos;s Build My System →
-//         </button>
-//       </div>
-
-//     </div>
-//   );
-// }
-
-
-
-
-
-
-// --------CHATGPT------
-
-
-// "use client";
-
-// import { useEffect, useRef } from "react";
-
-// const steps = [
-//   {
-//     number: "01",
-//     title: "Targeting",
-//     items: [
-//       "Audience Research",
-//       "Patient Demographics",
-//       "Market Analysis",
-//       "Location Targeting",
-//       "Intent Segmentation",
-//     ],
-//   },
-//   {
-//     number: "02",
-//     title: "Creative",
-//     items: [
-//       "Ad Copywriting",
-//       "Visual Concepts",
-//       "Offer Positioning",
-//       "Hook Development",
-//       "Creative Testing",
-//     ],
-//   },
-//   {
-//     number: "03",
-//     title: "Conversion",
-//     items: [
-//       "Landing Pages",
-//       "Trust Signals",
-//       "Lead Forms",
-//       "Mobile Optimization",
-//       "Booking Flow",
-//     ],
-//   },
-//   {
-//     number: "04",
-//     title: "Automation",
-//     items: [
-//       "AI Follow-Up",
-//       "WhatsApp Sequences",
-//       "Email Nurturing",
-//       "Lead Qualification",
-//       "Appointment Reminders",
-//     ],
-//   },
-//   {
-//     number: "05",
-//     title: "Booking",
-//     items: [
-//       "Calendar Scheduling",
-//       "Lead Scoring",
-//       "Qualification Filters",
-//       "Consultation Requests",
-//       "Patient Confirmation",
-//     ],
-//   },
-//   {
-//     number: "06",
-//     title: "Revenue",
-//     items: [
-//       "Qualified Patients",
-//       "Booked Consultations",
-//       "Predictable Pipeline",
-//       "Higher Show Rates",
-//       "Business Growth",
-//     ],
-//   },
-// ];
-
-// export function ProcessSection() {
-//   const sectionRef = useRef<HTMLDivElement>(null);
-
-//   useEffect(() => {
-//     let ctx: any;
-
-//     const init = async () => {
-//       const gsapModule = await import("gsap");
-//       const stModule = await import("gsap/ScrollTrigger");
-
-//       const gsap = gsapModule.gsap;
-//       const ScrollTrigger = stModule.ScrollTrigger;
-
-//       gsap.registerPlugin(ScrollTrigger);
-
-//       ctx = gsap.context(() => {
-//         const sections =
-//           document.querySelectorAll<HTMLElement>(".process-section");
-
-//         sections.forEach((section) => {
-//           const left = section.querySelector(".left-content");
-//           const right = section.querySelector(".right-content");
-
-//           gsap.fromTo(
-//             left,
-//             {
-//               x: -120,
-//               opacity: 0,
-//             },
-//             {
-//               x: 0,
-//               opacity: 1,
-//               duration: 1.2,
-//               ease: "power3.out",
-//               scrollTrigger: {
-//                 trigger: section,
-//                 start: "top 70%",
-//               },
-//             }
-//           );
-
-//           gsap.fromTo(
-//             right,
-//             {
-//               x: 120,
-//               opacity: 0,
-//             },
-//             {
-//               x: 0,
-//               opacity: 1,
-//               duration: 1.2,
-//               ease: "power3.out",
-//               scrollTrigger: {
-//                 trigger: section,
-//                 start: "top 70%",
-//               },
-//             }
-//           );
-//         });
-//       }, sectionRef);
-//     };
-
-//     init();
-
-//     return () => {
-//       if (ctx) ctx.revert();
-//     };
-//   }, []);
-
-//   return (
-//     <section
-//       ref={sectionRef}
-//       id="process"
-//       className="bg-black text-[#F0EFE7]"
-//     >
-//       {/* Intro */}
-//       <div className="min-h-screen flex flex-col items-center justify-center text-center px-6">
-//         <p className="uppercase tracking-[0.35em] text-primary text-sm mb-8">
-//           Our Process
-//         </p>
-
-//         <h3 className="max-w-6xl font-bold leading-[0.95] text-[clamp(3rem,7vw,8rem)]">
-//           How We Turn
-//           <br />
-//           Clicks Into
-//           <br />
-//           Consultations
-//         </h3>
-
-//         <p className="mt-10 text-white/50 text-lg max-w-xl">
-//           Six steps. One growth system. Predictable patient acquisition.
-//         </p>
-//       </div>
-
-//       {/* Steps */}
-//       {steps.map((step) => (
-//         <div
-//           key={step.number}
-//           className="process-section min-h-screen border-t border-white/10 flex items-center"
-//         >
-//           <div className="max-w-7xl mx-auto w-full px-8 lg:px-16">
-//             <div className="grid lg:grid-cols-[1.5fr_0.8fr] gap-16 items-center">
-//               {/* Left */}
-//               <div className="left-content">
-//                 <div className="text-primary text-xl font-medium mb-4">
-//                   {step.number}/
-//                 </div>
-
-//                 <h3
-//                     className="
-//                         font-extrabold
-//                         leading-[0.88]
-//                         tracking-[-0.05em]
-//                         text-6xl
-//                         md:text-7xl
-//                         lg:text-8xl
-//                     "
-//                     >
-//                   {step.title}
-//                 </h3>
-//               </div>
-
-//               {/* Right */}
-//               <div className="right-content">
-//                 <div className="space-y-5">
-//                   {step.items.map((item) => (
-//                     <div
-//                       key={item}
-//                       className="
-//                         text-white/55
-//                         text-lg
-//                         border-b
-//                         border-white/5
-//                         pb-3
-//                       "
-//                     >
-//                       {item}
-//                     </div>
-//                   ))}
-//                 </div>
-
-//                 <button
-//                   className="
-//                     mt-16
-//                     text-xl
-//                     border-b
-//                     border-white
-//                     pb-1
-//                     hover:opacity-70
-//                     transition
-//                   "
-//                 >
-//                   View Process
-//                 </button>
-//               </div>
-//             </div>
-//           </div>
-//         </div>
-//       ))}
-
-//       {/* Final CTA */}
-//       <div className="border-t border-white/10 min-h-screen flex items-center justify-center">
-//         <div className="text-center px-6">
-//           <h3 className="font-bold text-[clamp(3rem,6vw,7rem)] leading-none">
-//             Ready To Grow?
-//           </h3>
-
-//           <p className="text-white/50 text-lg max-w-xl mx-auto mt-8">
-//             Every week without a system is another week your competitors are
-//             booking consultations that could have been yours.
-//           </p>
-
-//           <button
-//             className="
-//               mt-12
-//               px-10
-//               py-5
-//               bg-primary
-//               text-black
-//               font-semibold
-//               rounded-full
-//               hover:scale-105
-//               transition
-//             "
-//           >
-//             Book A Strategy Call
-//           </button>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// }
-
-
-
-
-
-
-
-
-
-
-
-"use client";
-
-const steps = [
+// ----chatgpt--
+
+import { ArrowRight } from "lucide-react";
+// import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
+
+const flowSteps = [
+  { number: "1", label: "Ad Impression" },
+  { number: "2", label: "Click" },
+  { number: "3", label: "Landing Page" },
+  { number: "4", label: "AI Follow-Up" },
+  { number: "5", label: "Booking Calendar" },
+  { number: "6", label: "Confirmed Consultation" },
+];
+
+const detailedSteps = [
   {
     number: "01",
-    label: "Ad Impression",
-    title: "Precision Targeting",
+    title: "How Ads Work — Precision Targeting",
     description:
+      "We position your clinic in front of high-intent local patients using precision targeting and intent-driven creatives.",
+    quote:
       "We run Meta and Google campaigns built specifically for aesthetic procedures. We align targeting, creative, and funnel so interest turns into booked patients instead of wasted traffic.",
     highlight: "Right audience + Right ad + Right moment",
   },
   {
     number: "02",
-    label: "Click",
-    title: "Intent-Driven Creative",
+    title: "How Leads Convert — Landing Page",
     description:
+      "Every click is directed to a conversion-optimized landing page designed to turn interest into booked consultations.",
+    quote:
       "A landing page converts when it matches intent fast and removes every distraction from the decision. If the next step isn't obvious, people compare, hesitate, and leave.",
     highlight: "Click to form submission to captured interest",
   },
   {
     number: "03",
-    label: "Landing Page",
-    title: "Conversion Infrastructure",
+    title: "How Follow-Up Works — AI Engine",
     description:
-      "Every click is directed to a conversion-optimized landing page designed to turn interest into booked consultations.",
-    highlight: "Optimized for one action — booking",
-  },
-  {
-    number: "04",
-    label: "AI Follow-Up",
-    title: "60-Second Response",
-    description:
-      "The moment a form is submitted, our AI sends a personalized WhatsApp or Email within 60 seconds. It nurtures over 7 days — 24 hours a day, 7 days a week.",
+      "Our AI follow-up system instantly contacts every lead within seconds and nurtures them until they book.",
+    quote:
+      "The moment a form is submitted, our AI sends a personalized WhatsApp or Email within 60 seconds. It then follows a multi-touch nurture sequence over 7 days — qualifying interest, answering questions, and guiding the lead toward booking a consultation. 24 hours a day, 7 days a week.",
     highlight: "Lead contacted in under 60 seconds, nurtured until booked",
   },
   {
-    number: "05",
-    label: "Booking Calendar",
-    title: "Qualified Scheduling",
+    number: "04",
+    title: "Qualified Booking — Consultation Confirmed",
     description:
-      "Only serious, pre-qualified patients are guided to your calendar. The AI has already confirmed their procedure interest and financial intent.",
+      "Only serious, qualified patients are guided to your calendar — not time-wasters.",
+    quote:
+      "Before a patient reaches your booking calendar, the AI has already qualified their intent, confirmed their procedure interest, and verified they are a genuine candidate. Your team receives pre-qualified, warm leads — not cold form submissions. The result: fewer no-shows, higher consultation-to-procedure conversion rates.",
     highlight: "Pre-qualified patients only reach your calendar",
-  },
-  {
-    number: "06",
-    label: "Confirmed Consultation",
-    title: "Revenue in Your Clinic",
-    description:
-      "Your team receives warm, qualified leads — not cold form submissions. Fewer no-shows, higher consultation-to-procedure conversion rates.",
-    highlight: "Serious patients. Real revenue. Predictable growth.",
   },
 ];
 
@@ -941,144 +229,378 @@ export function ProcessSection() {
   return (
     <section
       id="process"
-      className="relative"
-      style={{
-        backgroundImage: "url('/process-bg.jpg')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundAttachment: "fixed",
-      }}
+      aria-label="How our process works"
+      className="py-20 md:py-28"
     >
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black/75 pointer-events-none" />
-
-      {/* Content */}
-      <div className="relative z-10">
-
-        {/* Intro */}
-        <div className="min-h-screen flex flex-col items-center justify-center text-center px-6">
-          <p className="text-xs uppercase tracking-[0.2em] text-primary mb-4 font-medium">
-            Our Process
-          </p>
-
-          <h2 className="text-3xl md:text-5xl lg:text-6xl font-semibold text-white max-w-4xl leading-tight">
-            This Is Exactly How We Fill Your Consultation Calendar —{" "}
-            <span className="bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
-              Every Single Month
-            </span>
+      <div className="container mx-auto px-4">
+        {/* Heading */}
+        <div className="text-center mb-12 md:mb-16">
+          <h2 className="text-3xl md:text-4xl lg:text-4xl tracking-tight">
+            This Is Exactly How We Fill Your Consultation Calendar — Every
+            Single Month
           </h2>
-
-          <p
-            className="mt-6 text-base md:text-lg text-white/60 max-w-xl"
-            style={{ fontFamily: "var(--font-poppins), sans-serif" }}
-          >
-            Six steps. One system. Zero guesswork.
-          </p>
         </div>
 
-        {/* Steps */}
-        <div className="relative">
-          {steps.map((step, index) => (
-            <div
+        {/* Detailed Steps */}
+        <div className="max-w-5xl mx-auto">
+          {detailedSteps.map((step, index) => (
+            <article
               key={step.number}
-              className="sticky top-[15vh] min-h-screen flex items-center px-8"
-              style={{
-                zIndex: index + 1,
-              }}
+              className="sticky mb-6 md:mb-8"
+              style={{ top: `${96 + index * 20}px` }}
             >
-              <div className="w-full max-w-7xl mx-auto border-t border-white/10 py-20 bg-[#0B0D11]/90 backdrop-blur-md rounded-3xl px-10">
+              <div
+                style={{
+                  background: `linear-gradient(165deg, rgba(203,133,48) 9%, #13161c 45%)`,
+                  border: `1px solid rgba(203,133,48)`,
+                  borderRadius: "24px",
+                  padding: "clamp(32px, 5vw, 56px)",
+                  minHeight: "clamp(320px, 45vh, 480px)",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "space-between",
+                  boxShadow: "0 20px 60px rgba(0,0,0,0.4)",
+                }}
+              >
+                {/* Top — large title */}
+                <div>
+                  {/* Background number watermark */}
+              <div
+                aria-hidden="true"
+                style={{
+                  position: "absolute",
+                  top: "10px",
+                  right: "16px",
+                  fontSize: "clamp(5rem, 10vw, 8rem)",
+                  fontWeight: 900,
+                  color: "rgba(203,133,48,0.06)",
+                  lineHeight: 1,
+                  fontFamily: "'Poppins', sans-serif",
+                  userSelect: "none",
+                }}
+              >
+                {step.number}
+              </div>
 
-                <div className="grid lg:grid-cols-[1fr_320px] gap-16 items-start">
-
-                  {/* LEFT */}
-                  <div>
-                    <div
-                      className="text-lg font-medium mb-3"
-                      style={{ color: "#CB8530" }}
-                    >
-                      {step.number}/
-                    </div>
-
-                    <h3
-                      className="
-                        text-5xl
-                        md:text-6xl
-                        lg:text-7xl
-                        font-extrabold
-                        tracking-[-0.05em]
-                        leading-[0.9]
-                        text-white
-                      "
+                  <h3
+                    style={{
+                      fontSize: "clamp(2rem, 5vw, 4rem)",
+                      fontWeight: 600,
+                      color: "#F0EFE7",
+                      lineHeight: 1.1,
+                      margin: 0,
+                      fontFamily: "'Poppins', sans-serif",
+                      maxWidth: "100%",
+                    }}
+                  >
+                    {step.title.split(" — ")[0]}
+                    <br />
+                    <span
                       style={{
-                        fontFamily:
-                          "var(--font-poppins), sans-serif",
+                        color: "rgba(240,239,231,0.35)",
+                        fontWeight: 200,
+                        maxWidth: "100%",
+                        padding: "4px 8px",
+                        marginBottom: "4px",
                       }}
                     >
-                      {step.label}
-                    </h3>
-                  </div>
+                      {step.title.split(" — ")[1]}
+                    </span>
+                  </h3>
+                </div>
 
-                  {/* RIGHT */}
-                  <div className="pt-4">
-
-                    <div className="space-y-5">
-
-                      <p className="text-white/55 text-base">
-                        {step.title}
-                      </p>
-
-                      <p className="text-white/55 text-base leading-relaxed">
-                        {step.description}
-                      </p>
-
-                      <p
-                        className="text-sm"
-                        style={{ color: "#CB8530" }}
+                {/* Bottom — tags + description */}
+                <div>
+                  {/* Pills */}
+                  <div
+                    style={{
+                      display: "flex",
+                      flexWrap: "wrap",
+                      gap: "8px",
+                      marginBottom: "24px",
+                      marginTop: "16px",
+                    }}
+                  >
+                    {step.highlight.split(" + ").map((tag, i) => (
+                      <span
+                        key={i}
+                        style={{
+                          fontSize: "12px",
+                          padding: "6px 14px",
+                          borderRadius: "999px",
+                          border: "1px solid rgba(203,133,48,0.25)",
+                          color: "rgba(240,239,231,0.65)",
+                          fontFamily: "'Poppins', sans-serif",
+                          background: "rgba(203,133,48,0.06)",
+                        }}
                       >
-                        {step.highlight}
-                      </p>
-
-                    </div>
-
-                    <button
-                      className="
-                        mt-12
-                        text-white
-                        border-b
-                        border-white
-                        pb-1
-                        text-lg
-                        hover:opacity-70
-                        transition
-                      "
-                    >
-                      View Process
-                    </button>
-
+                        {tag.trim()}
+                      </span>
+                    ))}
                   </div>
 
+                  {/* Description row with star icon */}
+                  <div
+                    style={{
+                      display: "flex",
+                      gap: "16px",
+                      alignItems: "flex-start",
+                    }}
+                  >
+                    {/* Star icon */}
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      style={{ flexShrink: 0, marginTop: "3px" }}
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M12 2L13.5 9.5L21 12L13.5 14.5L12 22L10.5 14.5L3 12L10.5 9.5L12 2Z"
+                        stroke="#CB8530"
+                        strokeWidth="1.5"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                    <p
+                      style={{
+                        fontSize: "clamp(13px, 1.4vw, 16px)",
+                        color: "rgba(240,239,231,0.6)",
+                        lineHeight: 1.6,
+                        margin: 0,
+                        fontFamily: "'Poppins', sans-serif",
+                      }}
+                    >
+                      {step.description}
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
+            </article>
           ))}
         </div>
 
-        {/* CTA */}
-        <div className="min-h-[60vh] flex flex-col items-center justify-center px-4 text-center">
-          <p
-            className="text-base md:text-lg text-white/75 italic max-w-2xl mb-10"
-            style={{ fontFamily: "var(--font-poppins), sans-serif" }}
-          >
-            Every week without a system is a week your competitors are filling
-            the consultations that should be yours.
-          </p>
+        {/* Soft CTA */}
+        <p className="mt-12 text-center text-sm md:text-base leading-relaxed text-[#F0EFE7]/75 italic max-w-2xl mx-auto">
+          Every week without a system is a week your competitors are filling the
+          consultations that should be yours.
+        </p>
 
-          <button className="btn-primary text-sm md:text-base px-8 py-4">
+        {/* CTA Button */}
+        <div className="mt-10 flex justify-center">
+          <button className="btn-primary"
+          style={{
+            padding: "clamp(13px, 1.4vw, 19px) clamp(20px, 2.5vw, 35px)",
+            width: "clamp(200px, 40vw, 450px)",
+            fontSize: "clamp(18px, 1.4vw, 18px)",
+          }}>
             I'm Ready — Let's Build My System →
           </button>
         </div>
-
       </div>
     </section>
   );
 }
+
+// gsap new new
+
+// ------------- new version---------
+// "use client";
+// import { useEffect, useRef, useState } from "react";
+
+// const steps = [
+//   {
+//     number: "01",
+//     title: "Ad Impression",
+//     subtitle: "Precision Targeting",
+//     description: "We position your clinic in front of high-intent local patients before your competitor even loads their page.",
+//   },
+//   {
+//     number: "02",
+//     title: "AI Follow-Up",
+//     subtitle: "60-Second Response",
+//     description: "The moment a lead submits, our AI contacts them within 60 seconds via WhatsApp or Email — 24/7.",
+//   },
+//   {
+//     number: "03",
+//     title: "Lead Qualified",
+//     subtitle: "Smart Filtering",
+//     description: "Our system filters out time-wasters and verifies genuine interest, procedure intent, and financial capacity.",
+//   },
+//   {
+//     number: "04",
+//     title: "Consultation Booked",
+//     subtitle: "Revenue Confirmed",
+//     description: "Only pre-qualified, warm patients reach your calendar. Fewer no-shows. Higher conversion rates.",
+//   },
+// ];
+
+// export function ProcessSection() {
+//   const [visible, setVisible] = useState(false);
+//   const sectionRef = useRef<HTMLDivElement>(null);
+
+//   useEffect(() => {
+//     const observer = new IntersectionObserver(
+//       ([entry]) => {
+//         if (entry.isIntersecting) setVisible(true);
+//       },
+//       { threshold: 0.15 }
+//     );
+//     if (sectionRef.current) observer.observe(sectionRef.current);
+//     return () => observer.disconnect();
+//   }, []);
+
+//   return (
+//     <div id="process" ref={sectionRef} className="bg-[#0b0d11] py-20 md:py-28 px-4">
+//       <div className="container mx-auto">
+
+//         {/* Heading */}
+//         <div className="mb-16 md:mb-20">
+//           <p className="text-xs uppercase tracking-[0.2em] text-primary mb-4 font-medium">
+//             Our Process
+//           </p>
+//           <h2
+//             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-[#F0EFE7] leading-none uppercase"
+//             style={{ fontFamily: "'Poppins', sans-serif" }}
+//           >
+//             OUR<br />
+//             <span style={{ color: "#CB8530" }}>PROCESS</span>
+//           </h2>
+//         </div>
+
+//         {/* Cards grid */}
+//         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
+//           {steps.map((step, index) => (
+//             <div
+//               key={step.number}
+//               style={{
+//                 opacity: visible ? 1 : 0,
+//                 transform: visible ? "scale(1) translateY(0)" : "scale(0.92) translateY(30px)",
+//                 transition: `opacity 0.6s ease, transform 0.6s ease`,
+//                 transitionDelay: `${index * 120}ms`,
+//                 background: "rgba(30,31,38,0.6)",
+//                 border: "1px solid rgba(203,133,48,0.2)",
+//                 borderRadius: "20px",
+//                 padding: "32px 28px",
+//                 display: "flex",
+//                 flexDirection: "column",
+//                 gap: "16px",
+//                 backdropFilter: "blur(8px)",
+//                 position: "relative",
+//                 overflow: "hidden",
+//               }}
+//             >
+//               {/* Background number watermark */}
+//               <div
+//                 aria-hidden="true"
+//                 style={{
+//                   position: "absolute",
+//                   top: "-10px",
+//                   right: "16px",
+//                   fontSize: "clamp(5rem, 10vw, 8rem)",
+//                   fontWeight: 900,
+//                   color: "rgba(203,133,48,0.06)",
+//                   lineHeight: 1,
+//                   fontFamily: "'Poppins', sans-serif",
+//                   userSelect: "none",
+//                 }}
+//               >
+//                 {step.number}
+//               </div>
+
+//               {/* Gold dot */}
+//               <div
+//                 style={{
+//                   width: "42px",
+//                   height: "42px",
+//                   borderRadius: "12px",
+//                   background: "rgba(203,133,48,0.15)",
+//                   border: "1px solid rgba(203,133,48,0.35)",
+//                   display: "flex",
+//                   alignItems: "center",
+//                   justifyContent: "center",
+//                   flexShrink: 0,
+//                 }}
+//               >
+//                 <span
+//                   style={{
+//                     fontSize: "13px",
+//                     fontWeight: 700,
+//                     color: "#CB8530",
+//                     fontFamily: "'Poppins', sans-serif",
+//                   }}
+//                 >
+//                   {step.number}
+//                 </span>
+//               </div>
+
+//               {/* Divider */}
+//               <div
+//                 style={{
+//                   width: "100%",
+//                   height: "1px",
+//                   background: "rgba(203,133,48,0.15)",
+//                 }}
+//                 aria-hidden="true"
+//               />
+
+//               {/* Big number stat style */}
+//               <div
+//                 style={{
+//                   fontSize: "clamp(1.8rem, 3vw, 2.5rem)",
+//                   fontWeight: 700,
+//                   color: "#F0EFE7",
+//                   lineHeight: 1.1,
+//                   fontFamily: "'Poppins', sans-serif",
+//                 }}
+//               >
+//                 {step.title}
+//               </div>
+
+//               {/* Subtitle */}
+//               <div
+//                 style={{
+//                   fontSize: "clamp(14px, 1.5vw, 16px)",
+//                   fontWeight: 500,
+//                   color: "#CB8530",
+//                   fontFamily: "'Poppins', sans-serif",
+//                 }}
+//               >
+//                 {step.subtitle}
+//               </div>
+
+//               {/* Description */}
+//               <p
+//                 style={{
+//                   fontSize: "clamp(12px, 1.3vw, 14px)",
+//                   color: "rgba(240,239,231,0.55)",
+//                   lineHeight: 1.6,
+//                   fontFamily: "'Poppins', sans-serif",
+//                   margin: 0,
+//                 }}
+//               >
+//                 {step.description}
+//               </p>
+//             </div>
+//           ))}
+//         </div>
+
+//         {/* CTA */}
+//         <div className="mt-16 md:mt-20 text-center">
+//           <p
+//             className="text-sm md:text-base leading-relaxed text-[#F0EFE7]/65 italic max-w-2xl mx-auto mb-10"
+//             style={{ fontFamily: "'Poppins', sans-serif" }}
+//           >
+//             Every week without a system is a week your competitors are filling
+//             the consultations that should be yours.
+//           </p>
+//           <button className="btn-primary text-sm md:text-base px-8 py-4">
+//             I&apos;m Ready — Let&apos;s Build My System →
+//           </button>
+//         </div>
+
+//       </div>
+//     </div>
+//   );
+// }

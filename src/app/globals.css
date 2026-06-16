@@ -1,4 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=DM+Sans:wght@400;500&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=DM+Sans:wght@400;500&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=DM+Sans:wght@400;500&family=Playfair+Display:wght@700;900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=DM+Sans:wght@400;500&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Playfair+Display:wght@700;900&family=Outfit:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap'); */
+
 @import "tailwindcss";
 
 @custom-variant dark (&:is(.dark *));
@@ -23,6 +26,16 @@
   --input-background: #1e2028;
   --ring: #CB8530;
   --radius: 0.625rem;
+}
+
+
+/* New Font Family  */
+@font-face {
+  font-family: 'Druk Wide Bold';
+  src: url('/FontsFree-Net-Druk-Wide-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
 }
 
 @theme inline {
@@ -123,6 +136,20 @@ html {
   color: #cb8530;
 }
 
+.pin-spacer {
+  padding-bottom: 0px !important;
+}
+
+/* ---------temporaray------------ */
+
+
+.split-parent {
+  overflow: hidden;
+}
+
+.char {
+  display: inline-block;
+}
 
 
 /* ---------Chrome------------ */

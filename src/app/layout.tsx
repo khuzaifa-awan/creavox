@@ -8,10 +8,10 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://creavox.media'),
+  metadataBase: new URL('https://creavox'),
   title: {
-    default: 'Creavox Media — Patient Acquisition for Aesthetic & Med Spa Clinics',
-    template: '%s | Creavox Media',
+    default: 'Creavox — Patient Acquisition for Aesthetic & Med Spa Clinics',
+    template: '%s | Creavox',
   },
   description:
     "We fill med spa and aesthetic clinic consultation calendars in 30 days — or you don't pay. Precision paid media, AI follow-up, and qualified lead generation for aesthetic practices.",
@@ -24,11 +24,11 @@ export const metadata: Metadata = {
     'AI patient follow-up automation',
     'medical spa marketing',
     'cosmetic clinic marketing agency',
-    'Creavox Media',
+    'Creavox',
   ],
-  authors: [{ name: 'Creavox Media', url: 'https://creavox.media' }],
-  creator: 'Creavox Media',
-  publisher: 'Creavox Media',
+  authors: [{ name: 'Creavox', url: 'https://creavox' }],
+  creator: 'Creavox',
+  publisher: 'Creavox',
   robots: {
     index: true,
     follow: true,

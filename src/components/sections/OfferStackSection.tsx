@@ -255,8 +255,12 @@ export function OfferStackSection() {
 
         <div className="mt-12 sm:mt-16 flex flex-col items-center gap-3 px-4 sm:px-0">
           <button
-            className="btn-primary w-full sm:w-auto text-md sm:text-base"
-            style={{ padding: "16px 36px" }}
+            className="btn-primary"
+          style={{
+            padding: "clamp(13px, 1.4vw, 19px) clamp(20px, 2.5vw, 35px)",
+            width: "clamp(200px, 40vw, 450px)",
+            fontSize: "clamp(18px, 1.4vw, 18px)",
+          }}
           >
             Claim My Spot in the System →
           </button>

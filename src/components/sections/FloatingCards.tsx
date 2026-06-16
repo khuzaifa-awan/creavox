@@ -263,6 +263,7 @@
 
 
 // ----------chrome-----------
+
 // "use client";
 
 // import { useEffect, useRef } from "react";
@@ -309,7 +310,7 @@
 //           width: "72px",
 //           height: "72px",
 //           borderRadius: "20px",
-//           background: "linear-gradient(135deg, #cb8530, #e8a84a)",
+//           // background: "linear-gradient(135deg, #cb8530, #e8a84a)",
 //           boxShadow: "0 0 40px rgba(203,133,48,0.4)",
 //           display: "flex",
 //           alignItems: "center",

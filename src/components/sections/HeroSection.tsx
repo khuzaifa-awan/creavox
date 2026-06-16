@@ -139,11 +139,11 @@ export function HeroSection() {
   }, []);
 
   return (
-    <section className="relative py-16 sm:py-24 lg:py-32 overflow-hidden">
+    <section className="relative py-16 sm:py-24 lg:py-32 overflow-hidden bg-[#0b0d11]!">
       <div className="container mx-auto px-4 text-center">
 
         {/* Badge */}
-        <div
+        {/* <div
           className="mb-6 transition-all duration-500"
           style={{ opacity: visible ? 1 : 0, transform: visible ? "translateY(0)" : "translateY(10px)" }}
         >
@@ -156,7 +156,7 @@ export function HeroSection() {
               Limited to 3 Clinics Per Month
             </span>
           </div>
-        </div>
+        </div> */}
 
         {/* Headline */}
         <h1 className="mx-auto max-w-4xl text-4xl sm:text-5xl md:text-6xl lg:text-7xl tracking-tight mb-6 text-[#F0EFE7] animate-in fade-in slide-in-from-bottom-6 duration-500">
