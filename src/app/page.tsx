@@ -56,9 +56,9 @@ export default function HomePage() {
           transition: "opacity 0.6s ease",
         }}
       >
-        <Header />
+        <Header/>
         <main id="main-content">
-          <HeroSection/>
+          <HeroSection />
           <ProblemSection />
           <TrustParagraph />
           <MechanismSection />

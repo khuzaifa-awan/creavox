@@ -111,13 +111,7 @@
 //   );
 // }
 
-
-
-
-
 // -----safari----------
-
-
 
 // "use client";
 // import { useEffect, useRef, useState } from "react";
@@ -158,20 +152,20 @@
 //     <section ref={sectionRef} className="w-full px-4 sm:px-6 py-20 sm:py-32">
 //       <div className="w-full max-w-[1100px] mx-auto">
 
-        // <p className="mb-4 text-center text-[11px] font-normal tracking-[0.18em] uppercase text-primary">
-        //   THE COST OF INACTION
-        // </p>
+// <p className="mb-4 text-center text-[11px] font-normal tracking-[0.18em] uppercase text-primary">
+//   THE COST OF INACTION
+// </p>
 
-        // <h2 className="mb-6 text-center text-[#F0EFE7] leading-tight text-3xl sm:text-4xl md:text-5xl">
-        //   Most Clinics Are Burning Their Ad Budget on the Wrong People.
-        // </h2>
+// <h2 className="mb-6 text-center text-[#F0EFE7] leading-tight text-3xl sm:text-4xl md:text-5xl">
+//   Most Clinics Are Burning Their Ad Budget on the Wrong People.
+// </h2>
 
-        // <p
-        //   className="mb-12 sm:mb-16 text-center mx-auto max-w-[700px] text-base sm:text-lg leading-relaxed text-[#F0EFE7]/75"
-        //   style={{ fontFamily: "'Poppins', sans-serif" }}
-        // >
-        //   Your competitors aren&apos;t better surgeons. They just have a better system.
-        // </p>
+// <p
+//   className="mb-12 sm:mb-16 text-center mx-auto max-w-[700px] text-base sm:text-lg leading-relaxed text-[#F0EFE7]/75"
+//   style={{ fontFamily: "'Poppins', sans-serif" }}
+// >
+//   Your competitors aren&apos;t better surgeons. They just have a better system.
+// </p>
 
 //         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 sm:gap-6">
 //           {problems.map((problem, index) => (
@@ -216,9 +210,7 @@
 //   );
 // }
 
-
-
-// -----chrome----------problem vs solution image 
+// -----chrome----------problem vs solution image
 
 "use client";
 
@@ -239,8 +231,7 @@ const comparisons = [
     label: "Response Time",
     manual:
       "Leads wait hours for a reply and go cold before anyone follows up.",
-    solution:
-      "Every lead receives a response within 60 seconds, day or night.",
+    solution: "Every lead receives a response within 60 seconds, day or night.",
   },
   {
     icon: MoonStar,
@@ -255,24 +246,20 @@ const comparisons = [
     label: "Lead Quality",
     manual:
       "Your team wastes time speaking with people who never intended to book.",
-    solution:
-      "Only serious, qualified patients reach your calendar.",
+    solution: "Only serious, qualified patients reach your calendar.",
   },
   {
     icon: TrendingUp,
     label: "Scaling",
-    manual:
-      "Growing means hiring more staff and increasing operational costs.",
-    solution:
-      "Handle more enquiries without adding headcount.",
+    manual: "Growing means hiring more staff and increasing operational costs.",
+    solution: "Handle more enquiries without adding headcount.",
   },
   {
     icon: CalendarDays,
     label: "Consistency",
     manual:
       "Some weeks are busy, others are empty. Revenue stays unpredictable.",
-    solution:
-      "A reliable system creates consistent patient flow every month.",
+    solution: "A reliable system creates consistent patient flow every month.",
   },
 ];
 
@@ -282,8 +269,7 @@ export function ProblemSection() {
   return (
     <section className="px-4 sm:px-6 py-20 sm:py-32">
       <div className="max-w-[1200px] mx-auto">
-
-                <p className="mb-4 text-center text-[11px] font-normal tracking-[0.18em] uppercase text-primary">
+        <p className="mb-4 text-center text-[11px] font-normal tracking-[0.18em] uppercase text-primary">
           THE COST OF INACTION
         </p>
 
@@ -298,15 +284,12 @@ export function ProblemSection() {
         </p>
         {/* Header */}
         <div className="flex flex-col lg:flex-row lg:justify-between gap-10 mb-2">
-
           <div>
             <p className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[11px] uppercase tracking-[0.18em] text-primary mb-5">
               Problem vs Solution
             </p>
 
-            <p className="text-[#F0EFE7] text-2xl md:text-4xl leading-tight max-w-[650px]">
-              
-            </p>
+            <p className="text-[#F0EFE7] text-2xl md:text-4xl leading-tight max-w-[650px]"></p>
           </div>
 
           {/* <p
@@ -320,7 +303,6 @@ export function ProblemSection() {
 
         {/* ================= MOBILE ================= */}
         <div className="md:hidden">
-
           {/* Toggle */}
           <div className="flex p-1 rounded-full border border-white/10 bg-white/5 mb-8">
             <button
@@ -357,9 +339,7 @@ export function ProblemSection() {
                 >
                   <div className="flex items-center gap-3 mb-5">
                     <Icon className="h-5 w-5 text-primary" />
-                    <h3 className="text-[#F0EFE7] font-medium">
-                      {item.label}
-                    </h3>
+                    <h3 className="text-[#F0EFE7] font-medium">{item.label}</h3>
                   </div>
 
                   <div className="flex items-start gap-3">
@@ -370,9 +350,7 @@ export function ProblemSection() {
                     )}
 
                     <p className="text-[#F0EFE7]/70 leading-relaxed text-sm">
-                      {activeTab === "manual"
-                        ? item.manual
-                        : item.solution}
+                      {activeTab === "manual" ? item.manual : item.solution}
                     </p>
                   </div>
                 </div>
@@ -383,15 +361,11 @@ export function ProblemSection() {
 
         {/* ================= TABLET + DESKTOP ================= */}
         <div className="hidden md:block overflow-hidden rounded-[32px] border border-white/10">
-
           {/* Header Row */}
           <div className="grid grid-cols-[220px_1fr_1fr] border-b border-white/10">
-
             <div />
 
-            <div className="py-8 text-center text-[#F0EFE7]/60">
-              Manual
-            </div>
+            <div className="py-8 text-center text-[#F0EFE7]/60">Manual</div>
 
             <div className="py-8 text-center text-primary bg-primary/5">
               Creavox System
@@ -410,9 +384,7 @@ export function ProblemSection() {
                 <div className="p-8 flex items-center gap-3">
                   <Icon className="h-5 w-5 text-primary" />
 
-                  <span className="text-[#F0EFE7]">
-                    {item.label}
-                  </span>
+                  <span className="text-[#F0EFE7]">{item.label}</span>
                 </div>
 
                 {/* Manual */}
@@ -442,26 +414,24 @@ export function ProblemSection() {
           className="mt-12 text-center text-[#F0EFE7]/70 italic max-w-3xl mx-auto"
           style={{ fontFamily: "'Poppins', sans-serif" }}
         >
-         Your competitors aren&apos;t better surgeons. They just have a better system.
+          Your competitors aren&apos;t better surgeons. They just have a better
+          system.
         </p>
-        
 
         {/* CTA */}
         <div className="mt-10 flex justify-center">
           <button
-          className="btn-primary"
-          style={{
-            padding: "clamp(13px, 1.4vw, 19px) clamp(20px, 2.5vw, 35px)",
-            width: "clamp(200px, 40vw, 450px)",
-            fontSize: "clamp(18px, 1.4vw, 18px)",
-          }}
-        >
-          Show Me the Fix →
-        </button>
+            className="btn-primary"
+            style={{
+              padding: "clamp(13px, 1.4vw, 19px) clamp(20px, 2.5vw, 35px)",
+              width: "clamp(265px, 37vw, 450px)",
+              fontSize: "clamp(19px, 1.4vw, 18px)",
+            }}
+          >
+            Show Me the Fix →
+          </button>
         </div>
       </div>
     </section>
   );
 }
-
-

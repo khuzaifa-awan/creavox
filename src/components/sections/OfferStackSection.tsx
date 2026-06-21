@@ -147,20 +147,32 @@
 //   );
 // }
 
-
-
-
-
 // ----safari------------
+
 "use client";
 import { useEffect, useRef, useState } from "react";
 
 const deliverables = [
-  { name: "Meta + Google Ad Campaigns", description: "Done-for-you, full management" },
-  { name: "AI Patient Follow-Up Automation", description: "WhatsApp, Email sequences" },
-  { name: "High-Converting Clinic Landing Page", description: "Custom build, procedure-specific" },
-  { name: "Lead Generation System Setup", description: "Full configuration & integration" },
-  { name: "Monthly Performance Reporting Dashboard", description: "Real-time analytics" },
+  {
+    name: "Meta + Google Ad Campaigns",
+    description: "Done-for-you, full management",
+  },
+  {
+    name: "AI Patient Follow-Up Automation",
+    description: "WhatsApp, Email sequences",
+  },
+  {
+    name: "High-Converting Clinic Landing Page",
+    description: "Custom build, procedure-specific",
+  },
+  {
+    name: "Lead Generation System Setup",
+    description: "Full configuration & integration",
+  },
+  {
+    name: "Monthly Performance Reporting Dashboard",
+    description: "Real-time analytics",
+  },
 ];
 
 export function OfferStackSection() {
@@ -169,8 +181,10 @@ export function OfferStackSection() {
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) setIsVisible(true); },
-      { threshold: 0.1 }
+      ([entry]) => {
+        if (entry.isIntersecting) setIsVisible(true);
+      },
+      { threshold: 0.1 },
     );
     if (sectionRef.current) observer.observe(sectionRef.current);
     return () => observer.disconnect();
@@ -179,7 +193,6 @@ export function OfferStackSection() {
   return (
     <section className="py-16 sm:py-20" ref={sectionRef}>
       <div className="container mx-auto px-4">
-
         <p className="mb-4 text-center text-[11px] font-normal tracking-[0.18em] uppercase text-primary">
           VALUE PRESENTATION
         </p>
@@ -213,21 +226,64 @@ export function OfferStackSection() {
                 }}
               >
                 {/* Checkmark */}
-                <div style={{ width: "24px", height: "24px", borderRadius: "50%", backgroundColor: "#cb8530", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, marginTop: "2px" }}>
-                  <svg width="14" height="11" viewBox="0 0 14 11" fill="none" aria-hidden="true">
-                    <path d="M1 5.5L5 9.5L13 1.5" stroke="#27282f" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                <div
+                  style={{
+                    width: "24px",
+                    height: "24px",
+                    borderRadius: "50%",
+                    backgroundColor: "#cb8530",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    flexShrink: 0,
+                    marginTop: "2px",
+                  }}
+                >
+                  <svg
+                    width="14"
+                    height="11"
+                    viewBox="0 0 14 11"
+                    fill="none"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M1 5.5L5 9.5L13 1.5"
+                      stroke="#27282f"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
                   </svg>
                 </div>
 
                 {/* Name */}
                 <div className="flex-1 min-w-0">
-                  <p style={{ fontSize: "15px", fontWeight: 500, color: "#F0EFE7", lineHeight: 1.5, margin: 0, fontFamily: "'Poppins', sans-serif" }}>
+                  <p
+                    style={{
+                      fontSize: "15px",
+                      fontWeight: 500,
+                      color: "#F0EFE7",
+                      lineHeight: 1.5,
+                      margin: 0,
+                      fontFamily: "'Poppins', sans-serif",
+                    }}
+                  >
                     {item.name}
                   </p>
                 </div>
 
                 {/* Description — hidden on very small screens */}
-                <div className="hidden sm:block" style={{ fontSize: "14px", fontWeight: 400, color: "#cb8530", flexShrink: 0, whiteSpace: "nowrap" }}>
+                <div
+                  className="hidden sm:block"
+                  style={{
+                    fontSize: "14px",
+                    fontWeight: 400,
+                    color: "#cb8530",
+                    flexShrink: 0,
+                    whiteSpace: "nowrap",
+                    fontFamily: "'Poppins', sans-serif",
+                  }}
+                >
                   {item.description}
                 </div>
               </div>
@@ -246,7 +302,15 @@ export function OfferStackSection() {
                 textAlign: "center",
               }}
             >
-              <span style={{ fontSize: "15px", fontWeight: 700, fontFamily: "'Poppins', sans-serif", color: "#cb8530", letterSpacing: "0.04em" }}>
+              <span
+                style={{
+                  fontSize: "15px",
+                  fontWeight: 700,
+                  fontFamily: "'Poppins', sans-serif" ,
+                  color: "#cb8530",
+                  letterSpacing: "0.04em",
+                }}
+              >
                 YOUR ENTIRE GROWTH ENGINE · DONE FOR YOU
               </span>
             </div>
@@ -256,15 +320,21 @@ export function OfferStackSection() {
         <div className="mt-12 sm:mt-16 flex flex-col items-center gap-3 px-4 sm:px-0">
           <button
             className="btn-primary"
-          style={{
-            padding: "clamp(13px, 1.4vw, 19px) clamp(20px, 2.5vw, 35px)",
-            width: "clamp(200px, 40vw, 450px)",
-            fontSize: "clamp(18px, 1.4vw, 18px)",
-          }}
+            style={{
+              padding: "clamp(13px, 1.4vw, 19px) clamp(20px, 2.5vw, 35px)",
+              width: "clamp(200px, 40vw, 450px)",
+              fontSize: "clamp(18px, 1.4vw, 18px)",
+            }}
           >
             Claim My Spot in the System →
           </button>
-          <p style={{ fontSize: "12px", color: "rgba(240,239,231,0.4)", margin: 0 }}>
+          <p
+            style={{
+              fontSize: "12px",
+              color: "rgba(240,239,231,0.4)",
+              margin: 0,
+            }}
+          >
             No commitment · No hard sell · Reschedule anytime
           </p>
         </div>

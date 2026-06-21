@@ -103,7 +103,7 @@
 //         </p>
 
 //         {/* Floating Cards — hidden on mobile, visible from md up */}
-        
+
 //         {/* <div
 //           aria-hidden="true"
 //           className=" md:block relative mx-auto max-w-5xl h-96 lg:h-[500px] mt-12"
@@ -118,13 +118,7 @@
 //   );
 // }
 
-
-
-
-
-
-// ---------Safari------------ 
-
+// ---------Safari------------
 
 "use client";
 import { useEffect, useState } from "react";
@@ -141,7 +135,6 @@ export function HeroSection() {
   return (
     <section className="relative py-16 sm:py-24 lg:py-32 overflow-hidden bg-[#0b0d11]!">
       <div className="container mx-auto px-4 text-center">
-
         {/* Badge */}
         {/* <div
           className="mb-6 transition-all duration-500"
@@ -169,7 +162,8 @@ export function HeroSection() {
 
         {/* Subheadline */}
         <p className="mx-auto max-w-2xl text-base sm:text-lg text-muted-foreground mb-8 animate-in fade-in slide-in-from-bottom-6 duration-500 delay-100 px-4 sm:px-0">
-          We Fill Med Spa Consultation Calendars in 30 Days — Or You Don&apos;t Pay.
+          We Fill Med Spa Consultation Calendars in 30 Days — Or You Don&apos;t
+          Pay.
         </p>
 
         {/* CTA Buttons */}
@@ -179,7 +173,11 @@ export function HeroSection() {
         >
           <button
             className="btn-primary w-full sm:w-auto text-sm sm:text-base"
-            style={{ fontSize: "15px", padding: "16px 32px", borderRadius: "8px" }}
+            style={{
+              fontSize: "16px",
+              padding: "16px 32px",
+              borderRadius: "8px",
+            }}
           >
             Get My Free Clinic Growth Audit →
           </button>
@@ -191,13 +189,17 @@ export function HeroSection() {
         {/* Trust line */}
         <p
           className="mt-6"
-          style={{ fontSize: "13px", color: "rgba(240,239,231,0.5)", fontFamily: "'DM Sans', sans-serif" }}
+          style={{
+            fontSize: "13px",
+            color: "rgba(240,239,231,0.5)",
+            fontFamily: "'DM Sans', sans-serif",
+          }}
         >
           No commitment &bull; No hard sell &bull; Reschedule anytime
         </p>
 
         {/* Floating Cards Scene */}
-            {/* <div className="relative mx-auto max-w-5xl mt-6"
+        {/* <div className="relative mx-auto max-w-5xl mt-6"
             style={{ height: "clamp(280px, 55vw, 500px)" }}>
             <FloatingCards />
             </div> */}

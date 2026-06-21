@@ -24,9 +24,6 @@
 //   );
 // }
 
-
-
-
 // ---------safari------------
 
 // "use client";
@@ -51,10 +48,7 @@
 //   );
 // }
 
-
-
 // ---------safari gsap------------
-
 
 // "use client";
 
@@ -135,10 +129,6 @@
 //     </section>
 //   );
 // }
-
-
-
-
 
 // "use client";
 
@@ -268,7 +258,6 @@
 //   );
 // }
 
-
 "use client";
 
 import { useEffect, useRef } from "react";
@@ -324,7 +313,6 @@ export function TrustParagraph() {
     */
     <section className="relative overflow-hidden bg-muted/50 min-h-[70vh] md:min-h-[10vh] lg:min-h-[70vh]">
       <div className="flex flex-col lg:flex-row min-h-[80vh] md:min-h-[65vh] lg:min-h-[80vh]">
-
         {/*
           ══ LEFT PANEL — TEXT ════════════════════════════════════════════════
           Flat bg-muted/50 background (same as section), no border, no shadow.
@@ -339,7 +327,6 @@ export function TrustParagraph() {
             py-20 lg:py-0
           "
         >
-
           {/*
             Eyebrow — matches the reference's small uppercase label above the headline.
             Dim, tracked out, editorial.
@@ -359,7 +346,6 @@ export function TrustParagraph() {
             Our Approach
           </p>
 
-          
           <p
             ref={titleRef}
             style={{
@@ -378,10 +364,8 @@ export function TrustParagraph() {
             <span style={{ color: "#CB8530" }}>
               We don&apos;t work with everyone.
             </span>{" "}
-            Only clinics serious about growth.
+            We work exclusively with clinics serious about predictable growth.
           </p>
-
-
         </div>
 
         {/*
@@ -391,12 +375,12 @@ export function TrustParagraph() {
           This is the key move from the reference — the image panel is a hard
           rectangle that sits flush against the text panel with zero separation.
         */}
-       <div
-  className="w-full lg:w-1/2 relative min-h-[50vh] md:min-h-[45vh] lg:min-h-[50vh]"
-  aria-hidden="true"
->
+        <div
+          className="w-full lg:w-1/2 relative min-h-[50vh] md:min-h-[45vh] lg:min-h-[50vh]"
+          aria-hidden="true"
+        >
           <Image
-            src="/org-peep2.jpg"
+            src="/org-peep.jpg"
             alt=""
             fill
             sizes="(max-width: 1024px) 100vw, 50vw"
@@ -411,12 +395,13 @@ export function TrustParagraph() {
           */}
           <div
             className="absolute inset-y-0 left-0 w-16 pointer-events-none"
-            style={{
-              // background: "linear-gradient(to right, var(--muted), transparent)",s
-            }}
+            style={
+              {
+                // background: "linear-gradient(to right, var(--muted), transparent)",s
+              }
+            }
           />
         </div>
-
       </div>
     </section>
   );
@@ -600,6 +585,3 @@ export function TrustParagraph() {
 //     </section>
 //   );
 // }
-
-
-

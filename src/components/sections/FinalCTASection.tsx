@@ -100,12 +100,7 @@
 //   );
 // }
 
-
-
-
-
 // -------safari----------
-
 
 // "use client";
 // import { Card, CardContent } from "@/components/ui/Card";
@@ -374,11 +369,11 @@ import { useEffect, useState } from "react";
 export function FinalCTASection() {
   const [showPopup, setShowPopup] = useState(false);
 
-  // Show popup after 15 seconds
+  // Show popup after 25 seconds
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowPopup(true);
-    }, 19000);
+    }, 25000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -524,7 +519,11 @@ function CTACard() {
       >
         {/* First + Last name row */}
         <div
-          style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px" }}
+          style={{
+            display: "grid",
+            gridTemplateColumns: "1fr 1fr",
+            gap: "16px",
+          }}
         >
           <div style={{ textAlign: "left" }}>
             <label style={labelStyle}>First name</label>

@@ -32,7 +32,7 @@ export function IntroAnimation({ onComplete }: { onComplete: () => void }) {
       // Calculate radius
       const getRadius = () => {
         const fontSizePx = (window.innerWidth / 100) * fontSize;
-        return (fontSizePx / 2) / Math.sin((180 / numLines) * (Math.PI / 180));
+        return fontSizePx / 2 / Math.sin((180 / numLines) * (Math.PI / 180));
       };
 
       let radius = getRadius();
@@ -87,7 +87,7 @@ export function IntroAnimation({ onComplete }: { onComplete: () => void }) {
           duration: 1,
           ease: "expo.out",
         },
-        "-=0.4"
+        "-=0.4",
       );
 
       // Fade out all lines
@@ -100,7 +100,7 @@ export function IntroAnimation({ onComplete }: { onComplete: () => void }) {
           ease: "power2.in",
           stagger: 0.02,
         },
-        "-=0.2"
+        "-=0.2",
       );
 
       // Fade out entire stage

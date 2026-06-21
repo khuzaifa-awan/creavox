@@ -102,8 +102,6 @@
 //   );
 // }
 
-
-
 // ----------Safari------------
 
 "use client";
@@ -117,15 +115,21 @@ export function GuaranteeSection() {
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) setIsVisible(true); },
-      { threshold: 0.15 }
+      ([entry]) => {
+        if (entry.isIntersecting) setIsVisible(true);
+      },
+      { threshold: 0.15 },
     );
     if (sectionRef.current) observer.observe(sectionRef.current);
     return () => observer.disconnect();
   }, []);
 
   return (
-    <section id="guarantee" className="py-16 sm:py-20 bg-muted/50" ref={sectionRef}>
+    <section
+      id="guarantee"
+      className="py-16 sm:py-20 bg-muted/50"
+      ref={sectionRef}
+    >
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto">
           <Card
@@ -143,7 +147,10 @@ export function GuaranteeSection() {
               style={{ fontFamily: "'Poppins', sans-serif" }}
             >
               <div className="inline-flex items-center justify-center w-16 h-16 sm:w-24 sm:h-24 rounded-full bg-primary/20 border-4 border-primary/40 mb-6">
-                <Shield className="h-8 w-8 sm:h-12 sm:w-12 text-primary" aria-hidden="true" />
+                <Shield
+                  className="h-8 w-8 sm:h-12 sm:w-12 text-primary"
+                  aria-hidden="true"
+                />
               </div>
 
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold mb-6 leading-tight">
@@ -155,13 +162,16 @@ export function GuaranteeSection() {
               </p>
 
               <p className="text-base sm:text-lg text-muted-foreground mb-6 sm:mb-8 leading-relaxed max-w-2xl mx-auto">
-                If we don&apos;t generate a measurable increase in qualified consultation bookings within 30 days of
-                launching your system — we work for free until we do. No excuses. No fine print. No ambiguous metrics.
+                If we don&apos;t generate a measurable increase in qualified
+                consultation bookings within 30 days of launching your system —
+                we work for free until we do. No excuses. No fine print. No
+                ambiguous metrics.
               </p>
 
               <div className="pt-6 border-t border-primary/20">
                 <p className="text-sm sm:text-base text-muted-foreground italic">
-                  &ldquo;We have never had to activate this guarantee. But it exists because we mean what we say.&rdquo;
+                  &ldquo;We have never had to activate this guarantee. But it
+                  exists because we mean what we say.&rdquo;
                 </p>
               </div>
             </CardContent>

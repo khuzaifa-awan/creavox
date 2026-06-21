@@ -112,7 +112,7 @@ export function Footer() {
         <h1
           className="
         whitespace-nowrap
-
+        
         font-black
         uppercase
 
@@ -137,7 +137,6 @@ export function Footer() {
           {/* Brand col — spans 2 cols on md+ */}
           <div className="col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-             
               <span className="font-semibold text-foreground">Creavox</span>
             </div>
             <p className="text-muted-foreground text-sm leading-relaxed max-w-md">

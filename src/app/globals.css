@@ -1,7 +1,4 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=DM+Sans:wght@400;500&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=DM+Sans:wght@400;500&family=Playfair+Display:wght@700;900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
-/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=DM+Sans:wght@400;500&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Playfair+Display:wght@700;900&family=Outfit:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap'); */
-
 @import "tailwindcss";
 
 @custom-variant dark (&:is(.dark *));
@@ -29,14 +26,6 @@
 }
 
 
-/* New Font Family  */
-@font-face {
-  font-family: 'Druk Wide Bold';
-  src: url('/FontsFree-Net-Druk-Wide-Bold.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
 
 @theme inline {
   --color-background: var(--background);
@@ -61,7 +50,7 @@
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
 }
-@layer base {
+/* @layer base {
  
   * {
     @apply border-border outline-ring/50;
@@ -72,6 +61,19 @@
     
   }
   
+} */
+
+/* new layer */
+
+@layer base {
+ 
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  }
 }
 
 html {
@@ -149,6 +151,70 @@ html {
 
 .char {
   display: inline-block;
+}
+
+
+
+/* MechanismSection mobile */
+@media (max-width: 768px) {
+  .mech-slide {
+    display: block !important;
+    position: relative;
+  }
+
+  .mech-col-left {
+    position: relative;
+    z-index: 1;
+    width: 80% !important;
+    flex-basis: unset !important;
+    height: 100vh !important;
+    display: block !important;
+  }
+
+  .mech-col-right {
+    position: absolute !important;
+    z-index: 0;
+    left: 0;
+    top: 0;
+    width: 100% !important;
+    flex-basis: unset !important;
+    height: 100vh;
+  }
+
+  /* .mech-slide-content {
+    background: rgba(11, 13, 17, 0.75) !important;
+    border-right: none !important;
+    width: 100%;
+    height: 100vh;
+    padding: 8vw 6vw 12vw !important;
+    justify-content: flex-end !important;
+  } */
+
+  .mech-slide-content {
+    background: rgba(11, 13, 17, 0.75) !important;
+    border-right: none !important;
+    width: 100% !important;
+    height: 100vh !important;
+    min-height: 100vh !important;
+    padding: 8vw 6vw 12vw !important;
+    justify-content: center !important;
+    align-items: flex-start !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .mech-slide-title {
+    font-size: 13vw !important;
+    letter-spacing: -0.05em !important;
+    margin-bottom: 6vw !important;
+  }
+
+  .mech-slide-desc {
+    max-width: 60vw !important;
+    font-size: 14px !important;
+    text-align: left !important;
+    margin-left: 0 !important;
+  }
 }
 
 

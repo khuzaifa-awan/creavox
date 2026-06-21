@@ -1,74 +1,77 @@
 import type { Metadata, Viewport } from "next";
-import './globals.css';
+import "./globals.css";
 
 export const viewport: Viewport = {
-  width: 'device-width',
+  width: "device-width",
   initialScale: 1,
-  themeColor: '#0b0d11',
+  themeColor: "#0b0d11",
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://creavox'),
+  metadataBase: new URL("https://creavox"),
   title: {
-    default: 'Creavox — Patient Acquisition for Aesthetic & Med Spa Clinics',
-    template: '%s | Creavox',
+    default: "Creavox — Patient Acquisition for Aesthetic & Med Spa Clinics",
+    template: "%s | Creavox",
   },
   description:
     "We fill med spa and aesthetic clinic consultation calendars in 30 days — or you don't pay. Precision paid media, AI follow-up, and qualified lead generation for aesthetic practices.",
   keywords: [
-    'med spa marketing agency',
-    'aesthetic clinic patient acquisition',
-    'plastic surgery marketing',
-    'med spa lead generation',
-    'aesthetic clinic advertising',
-    'AI patient follow-up automation',
-    'medical spa marketing',
-    'cosmetic clinic marketing agency',
-    'Creavox',
+    "med spa marketing agency",
+    "aesthetic clinic patient acquisition",
+    "plastic surgery marketing",
+    "med spa lead generation",
+    "aesthetic clinic advertising",
+    "AI patient follow-up automation",
+    "medical spa marketing",
+    "cosmetic clinic marketing agency",
+    "Creavox",
   ],
-  authors: [{ name: 'Creavox', url: 'https://creavox' }],
-  creator: 'Creavox',
-  publisher: 'Creavox',
+  authors: [{ name: "Creavox", url: "https://creavox" }],
+  creator: "Creavox",
+  publisher: "Creavox",
   robots: {
     index: true,
     follow: true,
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
   openGraph: {
-    type: 'website',
-    locale: 'en_US',
-    url: 'https://creavox.media',
-    siteName: 'Creavox Media',
-    title: 'Creavox Media — Patient Acquisition for Aesthetic & Med Spa Clinics',
-    description: "We fill med spa and aesthetic clinic consultation calendars in 30 days — or you don't pay.",
+    type: "website",
+    locale: "en_US",
+    url: "https://creavox.media",
+    siteName: "Creavox Media",
+    title:
+      "Creavox Media — Patient Acquisition for Aesthetic & Med Spa Clinics",
+    description:
+      "We fill med spa and aesthetic clinic consultation calendars in 30 days — or you don't pay.",
     images: [
       {
-        url: '/og-image.png',
+        url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: 'Creavox Media — Patient Acquisition System',
+        alt: "Creavox Media — Patient Acquisition System",
       },
     ],
   },
   twitter: {
-    card: 'summary_large_image',
-    title: 'Creavox Media — Patient Acquisition for Aesthetic Clinics',
-    description: "We fill med spa consultation calendars in 30 days — or you don't pay.",
-    images: ['/og-image.png'],
+    card: "summary_large_image",
+    title: "Creavox Media — Patient Acquisition for Aesthetic Clinics",
+    description:
+      "We fill med spa consultation calendars in 30 days — or you don't pay.",
+    images: ["/og-image.png"],
   },
   icons: {
-    icon: '/favicon.ico',
-    shortcut: '/favicon-16x16.png',
-    apple: '/apple-touch-icon.png',
+    icon: "/favicon.ico",
+    shortcut: "/favicon-16x16.png",
+    apple: "/apple-touch-icon.png",
   },
   alternates: {
-    canonical: 'https://creavox.media',
+    canonical: "https://creavox.media",
   },
 };
 

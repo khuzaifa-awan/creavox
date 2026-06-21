@@ -265,22 +265,22 @@ export function ProcessSection() {
                 {/* Top — large title */}
                 <div>
                   {/* Background number watermark */}
-              <div
-                aria-hidden="true"
-                style={{
-                  position: "absolute",
-                  top: "10px",
-                  right: "16px",
-                  fontSize: "clamp(5rem, 10vw, 8rem)",
-                  fontWeight: 900,
-                  color: "rgba(203,133,48,0.06)",
-                  lineHeight: 1,
-                  fontFamily: "'Poppins', sans-serif",
-                  userSelect: "none",
-                }}
-              >
-                {step.number}
-              </div>
+                  <div
+                    aria-hidden="true"
+                    style={{
+                      position: "absolute",
+                      top: "10px",
+                      right: "16px",
+                      fontSize: "clamp(5rem, 10vw, 8rem)",
+                      fontWeight: 900,
+                      color: "rgba(203,133,48,0.06)",
+                      lineHeight: 1,
+                      fontFamily: "'Poppins', sans-serif",
+                      userSelect: "none",
+                    }}
+                  >
+                    {step.number}
+                  </div>
 
                   <h3
                     style={{
@@ -389,12 +389,14 @@ export function ProcessSection() {
 
         {/* CTA Button */}
         <div className="mt-10 flex justify-center">
-          <button className="btn-primary"
-          style={{
-            padding: "clamp(13px, 1.4vw, 19px) clamp(20px, 2.5vw, 35px)",
-            width: "clamp(200px, 40vw, 450px)",
-            fontSize: "clamp(18px, 1.4vw, 18px)",
-          }}>
+          <button
+            className="btn-primary"
+            style={{
+              padding: "clamp(17px, 1.4vw, 19px) clamp(20px, 2.5vw, 35px)",
+              width: "clamp(335px, 40vw, 450px)",
+              fontSize: "clamp(17px, 1.4vw, 18px)",
+            }}
+          >
             I'm Ready — Let's Build My System →
           </button>
         </div>

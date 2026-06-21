@@ -48,7 +48,9 @@ export default function BookPage() {
             <span
               key={point}
               className="text-sm font-medium text-primary"
-              style={{ fontFamily: "var(--font-poppins), sans-serif" }}
+              style={{ fontFamily:
+                 "var(--font-poppins), sans-serif" 
+                }}
             >
               {point}
             </span>
